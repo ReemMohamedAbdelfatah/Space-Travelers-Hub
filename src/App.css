@@ -38,3 +38,12 @@
   color: blue;
   cursor: pointer;
 }
+
+.active {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.deActive {
+  text-decoration: none;
+}
