@@ -100,3 +100,20 @@
 .hide {
   display: none;
 }
+
+.rocketListDiv {
+  padding: 24px;
+  float: right;
+}
+
+.rocketListContainer {
+  width: 400px;
+  margin-top: 10px;
+}
+
+.rocketList {
+  list-style-type: none;
+  border: 0.5px solid rgba(128, 128, 128, 0.763);
+  padding: 12px;
+  border-radius: 4px;
+}
