@@ -7,7 +7,6 @@ const Rocket = (rocket) => {
     flickrImages, rocketName, description, id, reserved,
   } = rocket;
 
-  console.log(rocket);
   const dispatch = useDispatch();
   const handleReserve = () => {
     dispatch(reserveRocket(id));
