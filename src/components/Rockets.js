@@ -15,15 +15,16 @@ const Rockets = () => {
 
   return (
     <div className="allRocketsContainer">
-      {rocketList.map((item) => item.map((item) => (
+      {rocketList.map((item) => (
         <Rocket
           key={item.id}
           id={item.id}
-          flickrImages={item.flickr_images}
-          rocketName={item.rocket_name}
+          flickrImages={item.flickrImages}
+          rocketName={item.rocketName}
           description={item.description}
+          reserved={item.reserved}
         />
-      )))}
+      ))}
     </div>
   );
 };

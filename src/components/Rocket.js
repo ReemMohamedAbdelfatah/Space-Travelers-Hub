@@ -1,9 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from './redux/Rockets/Rockets';
 
 const Rocket = (rocket) => {
   const {
-    flickrImages, rocketName, description, id,
+    flickrImages, rocketName, description, id, reserved,
   } = rocket;
+
+  console.log(rocket);
+  const dispatch = useDispatch();
+  const handleReserve = () => {
+    dispatch(reserveRocket(id));
+  };
 
   return (
     <div className="rocketContainer" id={id}>
@@ -11,7 +19,14 @@ const Rocket = (rocket) => {
       <div className="rocketDetails">
         <h2 className="rocketName">{rocketName}</h2>
         <p className="rocketDescription">{description}</p>
-        <button type="button" className="reserveBtn">Reserve Rocket</button>
+
+        <button
+          type="button"
+          className="reserveBtn"
+          onClick={handleReserve}
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </button>
       </div>
     </div>
   );
