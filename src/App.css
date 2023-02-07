@@ -78,3 +78,25 @@
   color: white;
   margin-top: 15px;
 }
+
+.cancelReserved {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(75, 75, 75);
+  color: rgba(104, 104, 104, 0.73);
+  margin-top: 15px;
+}
+
+.show {
+  display: inline;
+  background-color: rgb(6, 158, 193);
+  color: rgb(255, 255, 255);
+  padding: 1px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.hide {
+  display: none;
+}
