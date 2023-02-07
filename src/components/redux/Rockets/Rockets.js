@@ -6,8 +6,8 @@ const ROCKETS = 'ROCKETS';
 
 const initialState = [];
 
-const fetchRockets = createAsyncThunk(ROCKETS, async() => {
- const response = await axios.get(URL);
+export const fetchRockets = createAsyncThunk(ROCKETS, async () => {
+  const response = await axios.get(URL);
   return response.data;
 });
 
