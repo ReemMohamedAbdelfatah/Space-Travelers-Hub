@@ -66,6 +66,10 @@
   height: 200px;
 }
 
+.rocketDescription {
+  margin-top: 10px;
+}
+
 .reserveBtn {
   padding: 10px;
   background-color: blue;
