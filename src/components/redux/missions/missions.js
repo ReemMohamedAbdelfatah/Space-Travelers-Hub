@@ -14,10 +14,16 @@ export const missionsSlice = createSlice({
       });
       return newState;
     },
-
+    leaveMission: (state, action) => {
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== action.payload) return mission;
+        return { ...mission, reserved: false };
+      });
+      return newState;
+    },
   },
 });
 
-export const { addMissions, joinMission } = missionsSlice.actions;
+export const { addMissions, joinMission, leaveMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
