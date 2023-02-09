@@ -2,15 +2,15 @@ import React from 'react';
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-const MyProfile = () => (
+const Rockets = () => (
   <div>
-    <h1>MyProfile</h1>
+    <h1>Rockets</h1>
   </div>
 );
 
-describe('MyProfile', () => {
+describe('Rockets', () => {
   test('render React component', () => {
-    render(<MyProfile />);
-    expect(screen.getByText('MyProfile')).toBeInTheDocument();
+    render(<Rockets />);
+    expect(screen.getByText('Rockets')).toBeInTheDocument();
   });
 });
