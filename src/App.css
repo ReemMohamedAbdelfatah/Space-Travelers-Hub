@@ -117,3 +117,20 @@
   padding: 12px;
   border-radius: 4px;
 }
+
+.missionListDiv {
+  padding: 24px;
+  float: left;
+}
+
+.missionListContainer {
+  width: 400px;
+  margin-top: 10px;
+}
+
+.missionList {
+  list-style-type: none;
+  border: 0.5px solid rgba(128, 128, 128, 0.763);
+  padding: 12px;
+  border-radius: 4px;
+}
