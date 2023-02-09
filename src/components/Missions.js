@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addMissions, joinMission, leaveMission } from './redux/missions/missions';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
+import {
+  addMissions,
+  joinMission,
+  leaveMission,
+} from './redux/missions/missions';
 import '../styles/style.scss';
 
 const Missions = () => {
@@ -25,43 +33,46 @@ const Missions = () => {
   };
 
   return (
-    <div className="mission-container">
-      <h2 className="mission-title">Missions</h2>
-      <ul className="mission-list">
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>Missions</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody>
         {missions.map((mission) => (
-          <li className="mission-item" key={mission.mission_id}>
-            <h3 className="mission-name">{mission.mission_name}</h3>
-            <p className="mission-description">{mission.description}</p>
-            <div className="mission-badge-container">
+          <tr key={mission.mission_id}>
+            <td>{mission.mission_name}</td>
+            <td>{mission.description}</td>
+            <td>
+              {mission.reserved ? <Badge bg="#18a2b8" style={{ backgroundColor: '#18a2b8' }}>Active Member</Badge> : <Badge bg="secondary">NOT A Member</Badge>}
+            </td>
+            <td>
               {mission.reserved ? (
-                <div className="active-member-badge">Active Member</div>
-              ) : (
-                <div className="not-a-member-badge">NOT A MEMBER</div>
-              )}
-            </div>
-            <div className="mission-action-container">
-              {mission.reserved ? (
-                <button
-                  type="button"
-                  className="leave-mission-button"
+                <Button
+                  variant="outline-danger"
                   onClick={() => handleLeaveMission(mission.mission_id)}
                 >
                   Leave Mission
-                </button>
+                </Button>
               ) : (
-                <button
+                <Button
+                  variant="outline-secondary"
                   type="button"
                   className="join-mission-button"
                   onClick={() => handleJoinMission(mission.mission_id)}
                 >
                   Join Mission
-                </button>
+                </Button>
               )}
-            </div>
-          </li>
+            </td>
+          </tr>
         ))}
-      </ul>
-    </div>
+      </tbody>
+    </Table>
   );
 };
 export default Missions;
