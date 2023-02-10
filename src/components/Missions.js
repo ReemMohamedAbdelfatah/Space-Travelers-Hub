@@ -36,21 +36,21 @@ const Missions = () => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>Missions</th>
+          <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th>#</th>
+          <th style={{ width: '10%' }}>#</th>
         </tr>
       </thead>
       <tbody>
         {missions.map((mission) => (
           <tr key={mission.mission_id}>
-            <td>{mission.mission_name}</td>
+            <td><th>{mission.mission_name}</th></td>
             <td>{mission.description}</td>
             <td>
-              {mission.reserved ? <Badge bg="#18a2b8" style={{ backgroundColor: '#18a2b8' }}>Active Member</Badge> : <Badge bg="secondary">NOT A Member</Badge>}
+              {mission.reserved ? <Badge bg="#18a2b8" style={{ backgroundColor: '#18a2b8' }}>Active Member</Badge> : <Badge bg="secondary">NOT A MEMBER</Badge>}
             </td>
-            <td>
+            <td style={{ alignItems: 'center' }}>
               {mission.reserved ? (
                 <Button
                   variant="outline-danger"
@@ -61,8 +61,6 @@ const Missions = () => {
               ) : (
                 <Button
                   variant="outline-secondary"
-                  type="button"
-                  className="join-mission-button"
                   onClick={() => handleJoinMission(mission.mission_id)}
                 >
                   Join Mission
