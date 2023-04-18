@@ -5,7 +5,7 @@ React group project
 
 <div align="center">
  
-  <h3><b>Space Travelers Hub</b></h3>
+  <h3><b>Space-Travelers-Hub</b></h3>
 
 </div>
 
@@ -15,7 +15,6 @@ React group project
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -89,10 +88,6 @@ React group project
 ## MyProfile_View
 ![MyProfile_View](./src/assets/screenshoot_myprofile.png)
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://)
-Coming soon!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
